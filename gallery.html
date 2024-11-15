@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="./gallery.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>  
+<body>
+    <div class="header">
+        <div class="nav-bar">
+            <div class="logo-sec">
+                <div class="iet-logo"><a href="#"><img src="./WhatsApp Image 2024-11-13 at 14.25.43_cfbc6468.jpg" alt="IET Logo"></a></div>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="nav-links" id="nav-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="activity.html">Activity</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="gallery.html" class="active">Gallery</a></li>
+                    <li><a href="faculty.html">Faculty</a></li>
+                    <li><a href="alumni.html">Team</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="gallery">
+        <div class="gallery-heading">
+            <h1>Gallery</h1>
+        </div>
+        <div class="gallery-subheading">
+            Welcome to our gallery! Photographs are a beautiful way to freeze moments in time. As the years pass, we have captured countless memories from our past events, and we hope you discover something special within our collection. Take your time to explore and enjoy our curated selection!
+        </div>
+        <div class="image-container">
+            <div class="container">
+                <div class="image">
+                    <img src="./Screenshot (157).png" alt="Image 1">
+                </div>
+                <div class="image">
+                    <img src="./Screenshot (158).png" alt="Image 2">
+                </div>
+                <div class="image">
+                    <img src="./Screenshot (159).png" alt="Image 3">
+                </div>
+                <div class="image full-width-image">
+                    <img src="./Screenshot (160).png" alt="Image 4">
+                </div>
+            </div>
+            
+            <div class="container">
+                <div class="image">
+                    <img src="./Screenshot (161).png" alt="Image 5">
+                </div>
+                <div class="image">
+                    <img src="./Screenshot (162).png" alt="Image 6">
+                </div>
+                <div class="image">
+                    <img src="./Screenshot (163).png" alt="Image 7">
+                </div>
+                <div class="image full-width-image">
+                    <img src="./Screenshot (164).png" alt="Image 8">
+                </div>
+            </div>
+    
+            <div class="container">
+                <div class="image">
+                    <img src="./Screenshot (165).png" alt="Image 9">
+                </div>
+                <div class="image">
+                    <img src="./Screenshot (166).png" alt="Image 10">
+                </div>
+                <div class="image">
+                    <img src="./Screenshot (167).png" alt="Image 11">
+                </div>
+                <div class="image full-width-image">
+                    <img src="./Screenshot (168).png" alt="Image 12">
+                </div>
+            </div>
+
+                
+            <div class="container">
+                <div class="image">
+                    <img src="./Screenshot (169).png" alt="Image 9">
+                </div>
+                <div class="image">
+                    <img src="./Screenshot (170).png" alt="Image 10">
+                </div>
+                <div class="image">
+                    <img src="./Screenshot (171).png" alt="Image 11">
+                </div>
+                <div class="image full-width-image">
+                    <img src="./Screenshot (172).png" alt="Image 12">
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="image">
+                    <img src="./Screenshot (173).png" alt="Image 9">
+                </div>
+                <div class="image">
+                    <img src="./Screenshot (174).png" alt="Image 10">
+                </div>
+                <div class="image">
+                    <img src="./Screenshot (175).png" alt="Image 11">
+                </div>
+                <div class="image full-width-image">
+                    <img src="./Screenshot (176).png" alt="Image 12">
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="image">
+                    <img src="./Screenshot (177).png" alt="Image 9">
+                </div>
+                <div class="image">
+                    <img src="./Screenshot (178).png" alt="Image 10">
+                </div>
+                <div class="image">
+                    <img src="./Screenshot (179).png" alt="Image 11">
+                </div>
+                <div class="image full-width-image">
+                    <img src="./Screenshot (180).png" alt="Image 12">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    
+    <footer>
+        <div class="footer-content">
+            <div class="copyright">
+                &copy; 2024 IET TMSL. All Rights Reserved.
+            </div>
+            <div class="social-media">
+                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Get the hamburger icon and navigation links
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+
+        // Toggle navigation on hamburger click
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+            document.body.classList.toggle("no-scroll");
+        });
+        
+    </script>
+    <script>
+        console.log("Made by Rishav Das (best boy)")
+    </script>
+
+    <script>
+        let lastScrollY = window.scrollY;
+        const navBar = document.querySelector('.header');
+        
+        window.addEventListener('scroll', () => {
+            if (window.innerWidth > 1360) { // Only apply on screens wider than 1360px
+                if (window.scrollY > lastScrollY) {
+                    // Scrolling down
+                    navBar.classList.add('hidden');
+                } else {
+                    // Scrolling up
+                    navBar.classList.remove('hidden');
+                }
+            } else {
+                // Remove 'hidden' class on smaller screens to keep the navbar visible
+                navBar.classList.remove('hidden');
+            }
+            lastScrollY = window.scrollY;
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,474 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+/* Header styling */
+#navbar-container
+{
+    position: sticky;
+}
+.header {
+    height: 10vh;
+    width: 100%;
+    background: linear-gradient(135deg, rgba(160, 71, 188, 1), rgba(55, 17, 119, 1));
+    display: flex;
+    align-items: center;
+    position: sticky;
+    justify-content: center;
+    top: 0; 
+    overflow: hidden;
+    z-index: 1;
+    transition: 0.3s;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content:space-between ;
+    align-items: center;
+    padding: 15px 12px;
+    width: 85%;
+    position: sticky; 
+    top: 0; 
+    width:100%
+}
+
+
+.iet-logo a img {
+    height: 70px;
+    filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.16));
+    transition: transform 0.3s ease;
+}
+
+.iet-logo a img:hover {
+    transform: scale(1.1);
+}
+
+/* Hamburger Icon */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    margin: 4px;
+    transition: all 0.3s ease;
+}
+
+.nav-links {
+    width: 60vw;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.nav-links ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.nav-links ul li {
+    list-style: none;
+}
+
+.nav-links ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 10px 20px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    font-family: sans-serif;
+}
+
+.nav-links ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    color: #f1c40f;
+    font-family: sans-serif;
+}
+/* Centering the .container */
+.container {
+    max-width: 800px;
+    margin: 50px auto; /* Centers the container */
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9); /* Light background */
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Additional styling for headings and paragraphs */
+h1, h2 {
+    color: #5f259f;
+    margin-bottom: 15px;
+}
+
+p {
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+/*here*/
+.about-section {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+}
+
+#iet {
+    text-align: center; 
+    width: 80%;
+    position: relative; 
+    margin-top: 100px;
+}
+
+#iet h3 {
+    font-weight: bold; 
+    font-size: 72px; 
+    margin-bottom: 50px; 
+}
+
+#iet p {
+    font-size: 24px; 
+    margin-bottom: 50px; 
+    color: #312f2f; /
+}
+
+/* Additional styles for TMSL Chapter */
+.TMSL-Chapter {
+    width: 80%; 
+    text-align: center; 
+    margin-bottom: 50px; 
+    margin-top: 50px;
+}
+
+.heading-TMSL h3 {
+    font-weight: bold; 
+    font-size: 59px; 
+    margin-bottom: 50px; 
+    
+}
+.heading-TMSL p
+{
+    font-size: 24px; 
+    margin-bottom: 50px; 
+}
+
+
+/* Achievements Section */
+.achievements {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align the heading */
+}
+
+.achievements-heading {
+    font-size: 54px; /* Adjust font size */
+    font-weight: bold; /* Make the heading bold */
+    margin-bottom: 20px; /* Space below heading */
+    text-align: center; /* Center align the heading text */
+    color: #fff;
+}
+
+.box-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow boxes to wrap */
+    justify-content: center; /* Center boxes horizontally */
+    gap: 20px; /* Space between boxes */
+}
+
+.box {
+    background-color: #fff; /* Default background color */
+    border: 1px solid #ddd; /* Border for boxes */
+    border-radius: 15px; /* Rounded corners */
+    padding: 15px; /* Inner spacing */
+    transition: background-color 0.5s, color 0.5s; /* Smooth transition for hover effect */
+    width: 300px; /* Width for each box */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for boxes */
+    cursor: pointer;
+}
+
+.box-heading h3 {
+    font-size: 18px; /* Heading size */
+    margin-bottom: 10px; /* Space between heading and content */
+}
+
+.box-desc p {
+    font-size: 14px; /* Paragraph size */
+}
+
+/* Hover effect */
+.box:hover {
+    background-color: black; /* Change background color on hover */
+    color: white; /* Change text color on hover */
+}
+.box:hover p {
+    color: white;
+}
+
+/* For bigger screens, change the background of achievements */
+@media (min-width: 768px) {
+    .achievements {
+        background-color: #6a1b9a; /* Change background color for larger screens */
+        padding: 40px;
+        border-radius: 15px;
+    }
+}
+
+
+
+.footer-content {
+    display: flex;
+    justify-content: space-between; /* Distribute space between items */
+    align-items: center; /* Center items vertically */
+    padding: 10px; /* Reduced padding */
+    background: rgba(95, 37, 159, 0.9); /* Footer background color */
+    color: white; /* Text color */
+}
+
+.social-media {
+    display: flex; /* Use flex for alignment */
+    justify-content: center; /* Center social media icons */
+}
+
+.social-media a {
+    color: white; /* Link color */
+    margin: 0 15px; /* Sufficient gap between icons */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease; /* Smooth transition for hover */
+}
+
+.social-media a:hover {
+    color: #f1c40f; /* Change color on hover */
+}
+@media (max-width: 1305px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        background-color: rgba(95, 37, 159, 0.9);
+        position: absolute;
+        top: 70px;
+        left: 0;
+        padding: 10px;
+        border-radius: 0 0 10px 10px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links ul li {
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .nav-links ul li a {
+        padding: 10px;
+        width: 100%;
+        display: block;
+    }
+
+    .iet-logo a img {
+        height: 60px;
+    }
+}
+
+.container-1, .container-2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    margin: 20px 0; /* Add space between containers */
+    border-radius: 10px; /* Add rounded corners */
+    background: rgba(255, 255, 255, 0.9); /* Light background for better contrast */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.container-1 .image, .container-2 .image {
+    flex: 1; /* Allow image to take up equal space */
+    padding: 10px; /* Space around the image */
+    transition: 0.5s;
+}
+
+.container-1 .text, .container-2 .text {
+    flex: 1; /* Allow text to take up equal space */
+    padding: 10px; /* Space around the text */
+}
+
+.container-1 .text {
+    text-align: center; /* Align text to the left */
+}
+
+.container-2 .text {
+    text-align: center; /* Align text to the right */
+}
+
+.container-1 img, .container-2 img {
+    width: 100%; /* Make images responsive */
+    border-radius: 10px; /* Rounded corners for images */
+    object-fit: cover; /* Maintain aspect ratio */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between; /* Distribute space between items */
+    align-items: center; /* Center items vertically */
+    padding: 10px; /* Reduced padding */
+    background: rgba(95, 37, 159, 0.9); /* Footer background color */
+    color: white; /* Text color */
+}
+
+.social-media {
+    display: flex; /* Use flex for alignment */
+    justify-content: center; /* Center social media icons */
+}
+
+.social-media a {
+    color: white; /* Link color */
+    margin: 0 15px; /* Sufficient gap between icons */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease; /* Smooth transition for hover */
+}
+
+.social-media a:hover {
+    color: #f1c40f; /* Change color on hover */
+}
+
+.nav-links ul li a.active {
+    background-color: rgba(255, 255, 255, 0.2); /* Same background color as hover */
+    border-radius: 5px;
+    color: #f1c40f; /* Same text color as hover */
+}
+
+.copyright
+{
+    font-family: sans-serif;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column; /* Stack items on smaller screens */
+        align-items: flex-start; /* Align items to the left */
+    }
+
+    .social-media {
+        margin-top: 10px; /* Space above social media links */
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column; /* Stack items on smaller screens */
+        align-items: center; /* Center items */
+    }
+
+    .social-media {
+        margin-top: 10px; /* Space above social media links */
+    }
+}
+
+@media (max-width: 768px) {
+    .slider {
+        max-width: 100%;
+    }
+
+    .prev, .next {
+        font-size: 24px;
+        padding: 8px;
+    }
+}
+
+
+@media (max-width: 1360px) {
+    /* Display the hamburger icon on small screens */
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        z-index: 1001;
+    }
+
+    /* Style the navigation links for small screens */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 10vh; /* Place it below the header */
+        left: 0;
+        width: 100vw;
+        height: 90vh;
+        background-color: rgba(95, 37, 159, 0.9);
+        transition: transform 0.3s ease;
+        z-index: 1000;
+    }
+
+    /* Show the navigation links when the menu is active */
+    .nav-links.active {
+        display: flex;
+    }
+
+    /* Make each link occupy one row */
+    .nav-links ul {
+        flex-direction: column;
+        width: 100%; /* Full width for each link */
+    }
+
+    .nav-links ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links ul li a {
+        display: block;
+        padding: 1em;
+        width: 100%;
+        color: #fff;
+        font-size: 1.25em;
+        text-align: center;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        font-family: sans-serif;
+    }
+
+    /* Hide the main content when the nav menu is active */
+    #main-content.hidden {
+        display: none;
+    }
+    body.no-scroll {
+        overflow: hidden;
+    }
+}
+
+.header.hidden {
+    transform: translateY(-100%);
+}
+
+#IET-color {
+    background: linear-gradient(45deg, rgba(255, 0, 150, 1), rgba(0, 204, 255, 1));
+    -webkit-background-clip: text;
+    color: transparent; /* Make text color transparent so the gradient shows */
+    font-weight: 600; /* Make it bold to stand out more */
+}

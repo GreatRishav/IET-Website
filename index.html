@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IET Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+
+
+    <div class="header">
+        <div class="nav-bar">
+            <div class="logo-sec">
+                <div class="iet-logo"><a href="#"><img src="./WhatsApp Image 2024-11-13 at 14.25.43_cfbc6468.jpg" alt="IET Logo"></a></div>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="nav-links" id="nav-links">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="activity.html">Activity</a></li> <!-- Fixed typo here -->
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="faculty.html">Faculty</a></li>
+                    <li><a href="alumni.html">Team</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Image Slider Section -->
+    <div class="slider">
+        <div class="slides">
+            <!-- Slide 1 -->
+            <div class="slide">
+                <img src="./Screenshot 2024-10-25 at 20-55-43 TMSL_IET_2024_ACHIEVEMENTS 1 .pdf.png" alt="Slide 1">
+            </div>
+            <!-- Slide 2 -->
+            <div class="slide">
+                <img src="./Screenshot (143).png" alt="Slide 2">
+            </div>
+            <!-- Slide 3 -->
+            <div class="slide">
+                <img src="./slider-pic-1.png" alt="Slide 3">
+            </div>
+
+                        <!-- Slide 4 -->
+            <div class="slide">
+                <img src="./Screenshot (193).png" alt="Slide 4">
+            </div>
+
+                        <!-- Slide 5 -->
+            <div class="slide">
+                <img src="./Screenshot (158) - Copy.png" alt="Slide 5">
+            </div>
+        </div>
+
+        <!-- Navigation Arrows -->
+        <div class="prev" onclick="moveSlide(-1)">&#10094;</div>
+        <div class="next" onclick="moveSlide(1)">&#10095;</div>
+    </div>
+
+    <div class="tagline-section">
+        <div class="tagline-heading">
+            <h2><div class="typing-text"></div></h2>
+        </div>
+    </div>
+
+    <div class="container-1">
+        <div class="image">
+            <img src="https://india.theiet.org/media/1177/student-2500.jpg?format=webp&quality=80&width=742&height=495&rnd=133301890978400000" alt="">
+        </div>
+        <div class="text">
+            <h2>History</h2>
+            <p>The Institution of Engineering and Technology (IET) was formed in 2006 from the merger of two historic organizations, the IEE and IIE, to become one of the largest engineering institutions globally. With over 150,000 members, the IET advances engineering through knowledge sharing, professional development, and advocacy, supporting innovation across industries like energy and healthcare.</p>
+        </div>
+    </div>
+
+    <div class="container-2">
+        <div class="text">
+            <h2>Why Us</h2>
+            <p>
+                The novelty of the TMSL IET Student Chapter is its focus on practical, hands-on learning through workshops, industrial visits, and real-world projects. It bridges academia and industry, encouraging students to innovate and develop solutions for real-world problems while gaining exposure to cutting-edge technology and a global professional network.</p>
+        </div>
+        <div class="image">
+            <img src="https://th.bing.com/th/id/OIP.hnjlTg__kdrlHiNOPQ0H6QHaE8?w=1000&h=667&rs=1&pid=ImgDetMain" alt="">
+        </div>
+    </div>
+
+    <!-- Graph Section -->
+    <div class="graph-section">
+        <h2>Our Impact</h2>
+        <canvas id="myChart"></canvas>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <div class="copyright">
+                &copy; 2024 IET TMSL. All Rights Reserved.
+            </div>
+            <div class="social-media">
+                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const ctx = document.getElementById('myChart').getContext('2d');
+        const myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['13-14', '14-15', '15-16', '16-17', '17-18', '18-19', '19-20', '20-21', '21-22', '22-23', '23-24'], // Years on X axis
+                datasets: [{
+                        label: 'Student Intake',
+                        data: [50, 60, 70, 80, 90, 100, 110, 100, 120, 130, 140], // Student intake values, linear increase till 2020, dip, and increase again
+                        borderColor: 'rgba(75, 192, 192, 1)', // Color for student intake line
+                        backgroundColor: 'rgba(75, 192, 192, 0.2)', // Transparent background color
+                        fill: false,
+                        tension: 0.1 // Smooth curve
+                    },
+                    {
+                        label: 'Activities',
+                        data: [12, 15, 18, 22, 45, 68, 70, 95, 140, 145, 150], // Activities data, you can adjust the values
+                        borderColor: 'rgba(255, 99, 132, 1)', // Color for activities line
+                        backgroundColor: 'rgba(255, 99, 132, 0.2)', // Transparent background color
+                        fill: false,
+                        tension: 0.1 // Smooth curve
+                    }
+                ]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Count'
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Year'
+                        }
+                    }
+                },
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    tooltip: {
+                        mode: 'index',
+                        intersect: false,
+                    }
+                }
+            }
+        });
+    </script>
+    
+    <script>
+        // Get the hamburger icon and navigation links
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+
+        // Toggle navigation on hamburger click
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+            document.body.classList.toggle("no-scroll");
+        });
+
+        //test
+        let lastScrollY = window.scrollY;
+        const navBar = document.querySelector('.header');
+        
+        window.addEventListener('scroll', () => {
+            if (window.innerWidth > 1360) { // Only apply on screens wider than 1360px
+                if (window.scrollY > lastScrollY) {
+                    // Scrolling down
+                    navBar.classList.add('hidden');
+                } else {
+                    // Scrolling up
+                    navBar.classList.remove('hidden');
+                }
+            } else {
+                // Remove 'hidden' class on smaller screens to keep the navbar visible
+                navBar.classList.remove('hidden');
+            }
+            lastScrollY = window.scrollY;
+        });
+    </script>
+
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.style.display = i === index ? 'block' : 'none';
+            });
+        }
+
+        function moveSlide(n) {
+            currentSlide = (currentSlide + n + slides.length) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        // Initialize the first slide
+        showSlide(currentSlide);
+    </script>
+
+    <script>
+        window.onload = function() {
+          var typingText = document.querySelector('.typing-text');
+          var text = `Working To Engineer A Better World "`; // The word to animate
+          var i = 0;
+          var isDeleting = false;
+          var delay = 150; // Adjust typing speed here (150ms)
+    
+          function typeWriter() {
+            if (isDeleting) {
+              // Deleting the text
+              typingText.innerHTML = '"'+ text.substring(0, i);
+              i--;
+    
+              if (i === 0) {
+                isDeleting = false;
+                setTimeout(typeWriter, 500); // Delay before starting to type again
+              }
+              else if(i === text.length-1)
+              {
+                setTimeout(typeWriter,500);
+              }
+              else {
+                setTimeout(typeWriter, delay/2); // Faster deletion
+              }
+            } else {
+              // Typing the text
+              typingText.innerHTML ='"'+ text.substring(0, i);
+              i++;
+    
+              if (i === text.length) {
+                isDeleting = true;
+                setTimeout(typeWriter, 1000); // Delay before starting to delete
+              } else {
+                setTimeout(typeWriter, delay); // Typing speed
+              }
+            }
+          }
+    
+          typeWriter(); // Start the animation
+        };
+      </script>
+
+</body>
+</html>

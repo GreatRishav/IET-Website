@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Typewriter Effect</title>
+  <style>
+    h1 {
+      font-size: 2rem;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Apply to the span with class typing-text */
+    .typing-text {
+      display: inline-block;
+      border-right: 0.1em solid orange; /* Typewriter cursor effect */
+    }
+
+    /* The typing effect */
+    .typing-text::after {
+      content: '';
+      animation: blink-caret 0.75s step-end infinite;
+    }
+
+    /* Blinking effect for the cursor */
+    @keyframes blink-caret {
+      0%, 100% {
+        border-color: transparent;
+      }
+      50% {
+        border-color: orange;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>"The Minds Behind Our <span class="typing-text"></span>"</h1>
+
+  <script>
+    window.onload = function() {
+      var typingText = document.querySelector('.typing-text');
+      var text = ' Institution '; // The word to animate
+      var i = 0;
+      var isDeleting = false;
+      var delay = 150; // Adjust typing speed here (150ms)
+
+      function typeWriter() {
+        if (isDeleting) {
+          // Deleting the text
+          typingText.innerHTML = text.substring(0, i);
+          i--;
+
+          if (i === 0) {
+            isDeleting = false;
+            setTimeout(typeWriter, 500); // Delay before starting to type again
+          } else {
+            setTimeout(typeWriter, delay / 2); // Faster deletion
+          }
+        } else {
+          // Typing the text
+          typingText.innerHTML = text.substring(0, i);
+          i++;
+
+          if (i === text.length) {
+            isDeleting = true;
+            setTimeout(typeWriter, 1000); // Delay before starting to delete
+          } else {
+            setTimeout(typeWriter, delay); // Typing speed
+          }
+        }
+      }
+
+      typeWriter(); // Start the animation
+    };
+  </script>
+</body>
+</html>

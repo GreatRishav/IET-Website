@@ -1,0 +1,43 @@
+/* GLOBAL STYLES */
+body {
+    padding-top: 5em;
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Prevent text from wrapping */
+  h1 {
+    white-space: nowrap; /* Ensure that the content stays on the same line */
+    font-size: 2em;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Typewriter effect applied to the .typing-text span */
+  .typing-text {
+    font-family: monospace;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typewriter cursor */
+    white-space: nowrap; /* Ensures that the text inside the span does not wrap */
+    display: inline-block; /* Keeps it inline with the surrounding text */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 3.5s steps(10) 1, /* Text appears one letter at a time */
+      blink-caret .5s step-end infinite; /* Blinking cursor effect */
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    0% {
+      width: 0%; /* Text is hidden at the beginning */
+    }
+    100% {
+      width: 100%; /* Text is fully visible at the end */
+    }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange }
+  }
+  

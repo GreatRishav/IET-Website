@@ -1,0 +1,304 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* Header styling */
+#navbar-container
+{
+    position: sticky;
+}
+.header {
+    height: 10vh;
+    width: 100%;
+    background: linear-gradient(135deg, rgba(160, 71, 188, 1), rgba(55, 17, 119, 1));
+    display: flex;
+    align-items: center;
+    position: sticky;
+    justify-content: center;
+    top: 0; 
+    overflow: hidden;
+    z-index: 1;
+    transition: 0.3s;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content:space-between ;
+    align-items: center;
+    padding: 15px 12px;
+    width: 85%;
+    position: sticky; 
+    top: 0; 
+    width:100%
+}
+
+.iet-logo a img {
+    height: 70px;
+    filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.16));
+    transition: transform 0.3s ease;
+}
+
+.iet-logo a img:hover {
+    transform: scale(1.1);
+}
+
+/* Hamburger Icon */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    margin: 4px;
+    transition: all 0.3s ease;
+}
+
+.nav-links {
+    width: 60vw;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.nav-links ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.nav-links ul li {
+    list-style: none;
+}
+
+.nav-links ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 10px 20px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    font-family: sans-serif;
+}
+
+.nav-links ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    color: #f1c40f;
+    font-family: sans-serif;
+}
+
+.nav-links ul li a.active {
+    background-color: rgba(255, 255, 255, 0.2); /* Same background color as hover */
+    border-radius: 5px;
+    color: #f1c40f; /* Same text color as hover */
+}
+
+/* Faculty Section */
+.faculty-section {
+    text-align: center;
+    padding: 40px 20px;
+     /* Light background for contrast */
+}
+
+.faculty-section h1 {
+    font-size: 6.5em;
+    margin-bottom: 30px;
+    color: #333; /* Dark text for better readability */
+}
+
+/* Faculty Container */
+.faculty-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the cards */
+    gap: 30px; /* Space between cards */
+    max-width: 1200px; /* Limit width */
+    margin: 0 auto; /* Center container */
+    margin-top: 3rem;
+}
+
+/* Faculty Card */
+.faculty-card {
+    background: white; /* White background for cards */
+    border-radius: 10px; /* Rounded corners */ /* Subtle shadow */
+    text-align: center;
+    padding: 20px;
+    width: 250px; /* Fixed width for cards */
+}
+
+/* Faculty Image */
+.faculty-image {
+    width: 100px; /* Width of the image container */
+    height: 100px; /* Height of the image container */
+    border-radius: 50%; /* Circular shape */
+    overflow: hidden; /* Clip overflow */
+    margin: 0 auto 10px; /* Center image with margin */
+    display: flex; /* Flexbox for centering the image */
+    justify-content: center; /* Center image horizontally */
+    align-items: center; /* Center image vertically */
+}
+
+.faculty-image:hover {
+    transform: scale(1.1); /* Enlarge the image to 110% of its size */
+    transition: transform 0.3s ease; 
+}
+.faculty-image img {
+    width: 100%; /* Take full width of the container */
+    height: 100%; /* Take full height of the container */
+    object-fit: cover; /* Ensure image covers the container without stretching */
+}
+
+
+
+/* Faculty Name and Designation */
+.faculty-name {
+    font-size: 1.5em; /* Font size for names */
+    color: #5f259f; /* Primary color */
+    margin-bottom: 5px; /* Space below name */
+    font-family: Courier New;
+
+}
+
+.faculty-designation {
+    font-size: 1em; /* Font size for designations */
+    color: #666; /* Secondary text color */
+    font-family: Courier New;
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.625em;
+    background: rgba(95, 37, 159, 0.9);
+    color: white;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+}
+
+.social-media a {
+    color: white;
+    margin: 0 1em;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+    color: #f1c40f;
+}
+
+
+@media (max-width: 1360px) {
+    /* Display the hamburger icon on small screens */
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        z-index: 1001;
+    }
+
+    /* Style the navigation links for small screens */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 10vh; /* Place it below the header */
+        left: 0;
+        width: 100vw;
+        height: 90vh;
+        background-color: rgba(95, 37, 159, 0.9);
+        transition: transform 0.3s ease;
+        z-index: 1000;
+    }
+
+    /* Show the navigation links when the menu is active */
+    .nav-links.active {
+        display: flex;
+    }
+
+    /* Make each link occupy one row */
+    .nav-links ul {
+        flex-direction: column;
+        width: 100%; /* Full width for each link */
+    }
+
+    .nav-links ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links ul li a {
+        display: block;
+        padding: 1em;
+        width: 100%;
+        color: #fff;
+        font-size: 1.25em;
+        text-align: center;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        font-family: sans-serif;
+    }
+
+    /* Hide the main content when the nav menu is active */
+    #main-content.hidden {
+        display: none;
+    }
+    body.no-scroll {
+        overflow: hidden;
+    }
+}
+.header.hidden {
+    transform: translateY(-100%);
+}
+
+/* Styling for the Text */
+.faculty-section>h1 {
+    font-size: clamp(24px, 8vw + 2em, 50px); /* Font size for the header text */
+    color: transparent; /* Make the text transparent to apply the gradient */
+    background-image: linear-gradient(135deg, rgba(160, 71, 188, 1), rgba(55, 17, 119, 1)); /* Gradient background */
+    background-clip: text; /* Make the gradient fill the text */
+    -webkit-background-clip: text; /* For Safari */
+    font-weight: bold; /* Ensure the text stays in one line */
+    overflow: hidden;
+    display: inline-block; /* Make sure text doesn't break into multiple lines */
+    padding: 0;
+    letter-spacing: 2px; /* Space between letters */
+    font-family: Lucida Console;
+}
+
+/* Typing Animation for "Institution" */
+/* Basic styling for the container */
+/* Animation for a moving and color-changing circle */
+.typing-text {
+    display: inline-block;
+    border-right: 0.1em solid orange; /* Typewriter cursor effect */
+  }
+
+  /* The typing effect */
+  .typing-text::after {
+    content: '';
+    animation: blink-caret 0.75s step-end infinite;
+  }
+
+  /* Blinking effect for the cursor */
+  @keyframes blink-caret {
+    0%, 100% {
+      border-color: transparent;
+    }
+    50% {
+      border-color: orange;
+    }
+  }
+
+  .typing-text
+  {
+    font-family: Lucida Console;
+  }
