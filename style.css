@@ -305,6 +305,12 @@ p {
     font-family: sans-serif;
 }
 
+.hide
+{
+    color: #666;
+    font-family: "Courier New", monospace;
+}
+
 /* Responsive Styles */
 @media (max-width: 85em) {
     .nav-links {
@@ -411,10 +417,25 @@ p {
     display: inline-block;
     border-right: 0.1em solid orange; /* Typewriter cursor effect */
     font-family: 'Times New Roman', Times, serif;
+    font-size: 2rem; 
+
   }
 
   /* The typing effect */
   .typing-text::after {
     content: '';
     animation: blink-caret 0.75s step-end infinite;
+  }
+  @media screen and (max-width: 600px) {
+    .typing-text {
+      font-size: 1.5rem; /* Smaller font size for mobile */
+      border-right: 0.1em solid lightgray; /* Adjust cursor color for smaller screens */
+      color: #555; /* Softer text color */
+    }
+    .hide
+    {
+        display: none;
+        color: #666;
+        font-family: "Courier New", monospace;
+    }
   }

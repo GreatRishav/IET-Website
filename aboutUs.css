@@ -369,38 +369,63 @@ body {
     font-family: sans-serif;
 }
 
-@media (max-width: 768px) {
-    .footer-content {
-        flex-direction: column; /* Stack items on smaller screens */
-        align-items: flex-start; /* Align items to the left */
-    }
 
-    .social-media {
-        margin-top: 10px; /* Space above social media links */
-    }
+.header.hidden {
+    transform: translateY(-100%);
 }
 
-@media (max-width: 768px) {
-    .footer-content {
-        flex-direction: column; /* Stack items on smaller screens */
-        align-items: center; /* Center items */
-    }
-
-    .social-media {
-        margin-top: 10px; /* Space above social media links */
-    }
+#IET-color {
+    background: linear-gradient(45deg, rgba(255, 0, 150, 1), rgba(0, 204, 255, 1));
+    -webkit-background-clip: text;
+    color: transparent; /* Make text color transparent so the gradient shows */
+    font-weight: 600; /* Make it bold to stand out more */
 }
 
-@media (max-width: 768px) {
-    .slider {
-        max-width: 100%;
+@media (max-width: 85em) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 3.75em;
+        left: 0;
+        background-color: #333;
+        width: 100%;
+        z-index: 1;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .container-1, .container-2 {
+        flex-direction: column;
+    }
+
+    .container-1 .image, .container-2 .image {
+        width: 100%;
     }
 
     .prev, .next {
-        font-size: 24px;
-        padding: 8px;
+        font-size: 1.5em;
+        padding: 0.5em;
+    }
+    .achievements-heading
+    {
+        color: #000;
     }
 }
+
+@media (max-width: 48em) {
+    .prev, .next {
+        font-size: 1.5em;
+        padding: 0.5em;
+    }
+}
+
 
 
 @media (max-width: 1360px) {
@@ -450,7 +475,6 @@ body {
         font-size: 1.25em;
         text-align: center;
         transition: background-color 0.3s ease, color 0.3s ease;
-        font-family: sans-serif;
     }
 
     /* Hide the main content when the nav menu is active */
@@ -460,15 +484,4 @@ body {
     body.no-scroll {
         overflow: hidden;
     }
-}
-
-.header.hidden {
-    transform: translateY(-100%);
-}
-
-#IET-color {
-    background: linear-gradient(45deg, rgba(255, 0, 150, 1), rgba(0, 204, 255, 1));
-    -webkit-background-clip: text;
-    color: transparent; /* Make text color transparent so the gradient shows */
-    font-weight: 600; /* Make it bold to stand out more */
 }
