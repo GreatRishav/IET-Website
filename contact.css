@@ -93,18 +93,27 @@
 }
 
 /* Contact Container */
+
+.contact-main
+{
+    margin-top: 100px;
+    /* background-color: aqua; */
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    padding-left: 20px;
+}
 .contact-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #E6E6FA;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 30px;
-    max-width: 800px;
-    margin: 30px auto;
+    width: 60%;
     gap: 30px;
+
+
 }
 
 .contact-container h1 {
@@ -131,7 +140,7 @@
 
 /* Feedback form styling */
 .feedback-form {
-    width: 45%; /* Adjust as needed */
+    width: 100%; /* Adjust as needed */
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -149,6 +158,7 @@
     border-radius: 5px;
     font-size: 1em;
     resize: vertical;
+    width: 100%;
 }
 
 .feedback-form textarea {
@@ -171,8 +181,13 @@
 }
 
 /* Map container styling */
+
+.contact-header
+{
+    background-color: aqua;
+}
 .map-container {
-    width: 60%; /* Increased width for the map container */
+    width: 100%; /* Increased width for the map container */
     border-radius: 8px;
     overflow: hidden;
 }
@@ -183,6 +198,39 @@
     min-height: 50%;
     z-index: 0;
 }
+
+.contact-right
+{
+
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.connect-with-us-section-heading
+{
+    color: #5f259f;
+}
+
+.connect-withus-main-box
+{
+    margin-top: 50px;
+}
+
+.connect-withus-main-box:nth-child(2)
+{
+    margin-top: 20px;
+}
+
+.line1>strong
+{
+    color: #5f259f;
+}
+
+
+
+
 
 .footer-content {
     display: flex;
@@ -294,4 +342,10 @@
 }
 .header.hidden {
     transform: translateY(-100%);
+}
+
+.mail
+{
+    color: #5f259f;
+    cursor: pointer;
 }
