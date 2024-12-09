@@ -212,6 +212,7 @@
             slides.forEach((slide, i) => {
                 slide.style.display = i === index ? 'block' : 'none';
             });
+
         }
 
         function moveSlide(n) {
@@ -220,7 +221,27 @@
         }
 
         // Initialize the first slide
+
         showSlide(currentSlide);
+
+        function logNumbers() {
+            console.log(currentSlide);
+            showSlide(currentSlide);
+            if(currentSlide>=slides.length-1)
+            {
+                currentSlide=-1;
+            }
+            currentSlide++;
+
+            setTimeout(logNumbers,5000);
+          }
+          
+          logNumbers(); 
+        
+
+
+
+
     </script>
 
     <script>

@@ -244,6 +244,11 @@
     color: #f1c40f;
 }
 
+.card:nth-child(3),.card:nth-child(4)
+{
+    display: flex;
+    justify-content: space-between;
+}
 .card:last-child
 {
     display: flex;
