@@ -33,7 +33,6 @@
 
 /* Alumni Section */
 .team-section {
-    text-align: center;
     padding: 40px 20px;
 }
 
@@ -43,7 +42,7 @@
     color: #333; /* Dark text for better readability */
     text-align: center;
     margin-left: 65px;
-    margin-bottom: 100px;
+    margin-bottom: 100px;    
 }
 
 /* Team Container */
@@ -63,11 +62,12 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
     overflow: hidden; /* Ensure content is contained */
     position: relative; /* For positioning social links */
-    width: 20%; /* Width for three cards per row minus gap space */
+    width: 30%; /* Width for three cards per row minus gap space */
     max-width: 300px; /* Max width for cards */
     transition: transform 0.3s ease; /* Smooth transform effect */
     margin-bottom: 100px;
     margin-left: 80px;
+    /* height: 40%; */
     
 }
 
@@ -78,7 +78,14 @@
 /* Alumni Image */
 .team-image {
     width: 100%; /* Full width */
-    height: auto; /* Maintain aspect ratio */
+    height: 70%;
+}
+
+.team-image>image
+{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
 /* Card Content */
@@ -91,7 +98,14 @@
     color:rgb(129, 10, 214);
     font-size: 20px;
     font-weight: 800;
+    text-align: center;
 }
+
+.card-content h3
+{
+    text-align: center;
+}
+
 
 /* Social Links */
 .team-social-links {
@@ -316,7 +330,7 @@
         align-items: center; /* Center-align vertically */
     }
     .team-card {
-        width: 30%; /* Show three cards per row on larger screens */
+        width: 48%; /* Show three cards per row on larger screens */
     }
 }
 
@@ -329,18 +343,73 @@
     .team-card {
         width: 48%; /* Show two cards per row */
     }
+
+    .team-section h2 {
+        font-size: 2.5em;
+        margin: 30px 0;
+        color: #333; /* Dark text for better readability */
+        text-align: center;
+        margin-left: 65px;
+        margin-bottom: 100px;
+        position: relative;
+        transform: translate(3%);
+        
+    }
 }
 
-/* Media Query for Smaller Screens */
-@media (max-width: 480px) {
-    .team-container {
-        justify-content: center; /* Center-align horizontally */
-        align-items: center; /* Center-align vertically */
-    }
-    .team-card {
-        width: 100%; /* Show one card per row */
-        margin-bottom: 15px; /* Adjust spacing */
-        position: relative;
-        left: -3%;
-    }
+.credit-section
+{
+
+    display: flex;
+    flex-direction: column;
 }
+
+.credit-section-heading
+{
+    text-align: center;
+    font-size: 1.5rem;
+    color: rgba(95, 37, 159, 0.9);
+}
+
+.credit-section-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.credit-table {
+    display: table;
+    border-collapse: collapse;
+    width: 80%;
+    margin: 0 auto;
+    text-align: left;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+}
+
+.credit-row {
+    display: table-row;
+    border-bottom: 1px solid #ddd;
+    transition: 0.5s;
+}
+
+.credit-row:nth-child(1) {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.credit-cell {
+    display: table-cell;
+    padding: 10px;
+    border-right: 1px solid #ddd;
+    text-align: center;
+}
+
+
+.credit-cell:last-child {
+    border-right: none;
+}
+
+

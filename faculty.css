@@ -10,6 +10,8 @@
 {
     position: sticky;
 }
+
+
 .header {
     height: 10vh;
     width: 100%;
@@ -130,19 +132,41 @@
     border-radius: 10px; /* Rounded corners */ /* Subtle shadow */
     text-align: center;
     padding: 20px;
-    width: 250px; /* Fixed width for cards */
+    width: 30%; /* Fixed width for cards */
 }
 
 /* Faculty Image */
 .faculty-image {
-    width: 100px; /* Width of the image container */
-    height: 100px; /* Height of the image container */
+    width: 200px; /* Width of the image container */
+    height: 200px; /* Height of the image container */
     border-radius: 50%; /* Circular shape */
     overflow: hidden; /* Clip overflow */
     margin: 0 auto 10px; /* Center image with margin */
     display: flex; /* Flexbox for centering the image */
     justify-content: center; /* Center image horizontally */
     align-items: center; /* Center image vertically */
+}
+
+
+@media screen and (max-width:992px){
+
+    .faculty-image
+    {
+        height: 150px;
+        width: 150px;
+    }
+
+    
+}
+
+@media screen and (max-width:780px) {
+
+    .faculty-image
+    {
+        height: 100px;
+        width: 100px;
+    }
+    
 }
 
 .faculty-image:hover {
@@ -288,6 +312,131 @@
     animation: blink-caret 0.75s step-end infinite;
   }
 
+
+
+
+  .senior-faculty
+  {
+    width: 100%;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .senior-faculty-Heading
+  {
+    font-size: 40px;
+    color: #7b00ff;
+    margin-bottom: 40px;
+    margin-top: 10px;
+  }
+
+  .seniour-faculty-card
+  {
+    height: 100%;
+    width: 60%;
+    display: flex;
+    /* background-color: aquamarine; */
+    align-items: center;
+    border-radius: 250px;
+    cursor: pointer;
+    
+  }
+
+  .seniour-faculty-image
+  {
+    height: 100%;
+    width: 40%;
+    border-radius: 50%;
+    border-top-left-radius: 200px;
+    border-bottom-left-radius: 200px;
+  }
+
+  .seniour-faculty-image>img
+  {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 200px;
+    border-bottom-left-radius: 200px;
+
+  }
+
+  .seniour-faculty-desc
+  {
+    width: 100%;
+    height: 100%;
+    background-color: #e9ecef;
+    display: flex;
+    flex-direction: column;
+    border-top-right-radius: 200px;
+    border-bottom-right-radius: 200px;
+    justify-content: center;
+    transition: 0.5s;
+    
+  }
+
+  .seniour-faculty-name
+  {
+
+    width: 100%;
+    text-align: center;
+    color: #5f259f;
+    font-size: 2em;
+    /* background-color: aqua; */
+
+
+  }
+
+
+  .line
+  {
+    /* background-color: antiquewhite; */
+    color: #7b00ff;
+    font-size: 18px;
+    text-align: center;
+  }
+
+
+  .seniour-faculty-designation {
+
+    display: none;
+    transform: rotateX(180deg);
+}
+
+.seniour-faculty-rotate {
+    transform: rotateX(180deg);
+}
+
+
+
+.senior-faculty-card.rotated .senior-faculty-designation {
+    display: block; /* Reveal on rotation */
+}
+
+
+.faculty-header
+{
+    margin-top: 25px;
+    font-size: 2.1rem;
+    color: #7b00ff;
+}
+
+.none
+{
+    display: none;
+}
+
+.show
+{
+    display: block;
+}
+
+
+
   /* Blinking effect for the cursor */
   @keyframes blink-caret {
     0%, 100% {
@@ -301,4 +450,124 @@
   .typing-text
   {
     font-family: Lucida Console;
+  }
+
+  @media screen  and (max-width:800px){
+
+    .typing-text
+    {
+
+        display: block; /* Moves it to the next line */
+        margin-top: 10px; /* Optional: Add some spacing */
+        font-size: 24px; 
+        
+
+    }
+
+    .faculty-section>h1
+    {
+        font-size: 28px;
+        background-color: aquamarine;
+        flex-wrap: nowrap;
+    }
+
+
+
+    .typing-text {
+        animation: none; /* Optional: Disable typewriter on very small screens */
+        font-size: 28px; /* Adjust font size */
+        border-style: none;
+    }
+
+
+    .seniour-faculty-card
+    {
+        width: 90%;
+    }
+
+
+    .senior-faculty-Heading
+    {
+        font-size: 35px;
+    }
+
+
+  }
+
+  @media screen and (max-width:576px){
+    
+    .seniour-faculty-name
+    {
+        font-size: 20px;
+    }
+
+    .line
+    {
+        font-size: 20px;
+
+    }
+
+
+    .senior-faculty-Heading
+    {
+        /* background-color: #5f259f; */
+    }
+
+    .seniour-faculty-card
+    {
+        width: 100%;
+        height: 80%;
+        /* background-color: aqua; */
+        margin-bottom: 0px;
+    }
+
+    .seniour-faculty-image
+    {
+        height: 50%;
+        width: 40%;
+        
+    }
+
+    .seniour-faculty-desc
+    {
+        height: 50%;
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .seniour-faculty-name
+    {
+            height: 30%; /* Increased height */
+            font-size: 1.8rem; /* Optional: Adjust font size for better scaling */
+            display: flex; /* Align content */
+            align-items: center; /* Center vertically */
+            justify-content: center; /* Center horizontally */
+            margin-bottom: 10px;
+        
+    }
+
+    .senior-faculty-Heading
+    {
+        font-size: 30px;
+        margin-bottom: 0px;
+    }
+
+    .senior-faculty
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        height: 300px;
+        /* background-color: black; */
+    }
+
+    .faculty-header
+{
+    margin-top: 0px;
+}
+
+
+
+
   }
