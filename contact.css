@@ -112,6 +112,7 @@
     border-radius: 8px;
     width: 60%;
     gap: 30px;
+    padding-left: 50px;
 
 
 }
@@ -239,7 +240,6 @@
     padding: 0.625em;
     background: rgba(95, 37, 159, 0.9);
     color: white;
-    margin-top: 0.2em;
     
 }
 
@@ -264,6 +264,15 @@
     border-radius: 5px;
     color: #f1c40f; /* Same text color as hover */
 }
+
+.connect-with-us-section-heading
+{
+    font-size: 1rem;
+}
+ .connect-withus-main-box
+ {
+    font-size: 1rem;
+ }
 
 /* Media queries for responsiveness */
 @media (max-width: 768px) {
@@ -348,4 +357,63 @@
 {
     color: #5f259f;
     cursor: pointer;
+}
+
+@media screen and (max-width:400px){
+
+ .contact-right
+ {
+    display: none;
+ }
+
+ .contact-main
+ {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+ }
+ .contact-container
+ {
+    
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.contact-container>h1
+{
+    width: 100%;
+    margin-right: 10%;
+}
+
+.contact-container>p
+{
+    margin-right: 10%;
+}
+
+.main-container
+{
+    margin-right: 10%;
+}
+
+
+ .iet-logo
+ {
+    width: 45vh;
+ }
+ .iet-logo a
+ {
+    width: 100%;
+ }
+ .iet-logo img
+ {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+ }
+
+
 }

@@ -43,11 +43,11 @@
         <div class="slides">
             <!-- Slide 1 -->
             <div class="slide">
-                <img src="./Screenshot 2024-10-25 at 20-55-43 TMSL_IET_2024_ACHIEVEMENTS 1 .pdf.png" alt="Slide 1">
+                <img src="/Screenshot (143).png" alt="Slide 1">
             </div>
             <!-- Slide 2 -->
             <div class="slide">
-                <img src="./Screenshot (143).png" alt="Slide 2">
+                <img src="./Screenshot 2024-10-25 at 20-55-43 TMSL_IET_2024_ACHIEVEMENTS 1 .pdf.png" alt="Slide 2">
             </div>
             <!-- Slide 3 -->
             <div class="slide">
@@ -125,7 +125,7 @@
                 labels: ['13-14', '14-15', '15-16', '16-17', '17-18', '18-19', '19-20', '20-21', '21-22', '22-23', '23-24'], // Years on X axis
                 datasets: [{
                         label: 'Student Intake',
-                        data: [50, 60, 70, 80, 90, 100, 110, 100, 120, 130, 140], // Student intake values, linear increase till 2020, dip, and increase again
+                        data: [50, 60, 70, 80, 90, 100, 110, 100, 120, 130, 140], // Student intake values
                         borderColor: 'rgba(75, 192, 192, 1)', // Color for student intake line
                         backgroundColor: 'rgba(75, 192, 192, 0.2)', // Transparent background color
                         fill: false,
@@ -133,7 +133,7 @@
                     },
                     {
                         label: 'Activities',
-                        data: [12, 15, 18, 22, 45, 68, 70, 95, 140, 145, 150], // Activities data, you can adjust the values
+                        data: [12, 15, 18, 22, 45, 68, 70, 95, 140, 145, 150], // Activities data
                         borderColor: 'rgba(255, 99, 132, 1)', // Color for activities line
                         backgroundColor: 'rgba(255, 99, 132, 0.2)', // Transparent background color
                         fill: false,
@@ -147,13 +147,29 @@
                         beginAtZero: true,
                         title: {
                             display: true,
-                            text: 'Count'
+                            text: 'Count',
+                            font: {
+                                size: 24 // Adjust font size for Y-axis title
+                            }
+                        },
+                        ticks: {
+                            font: {
+                                size: 22 // Adjust font size for Y-axis labels
+                            }
                         }
                     },
                     x: {
                         title: {
                             display: true,
-                            text: 'Year'
+                            text: 'Year',
+                            font: {
+                                size: 22 // Adjust font size for X-axis title
+                            }
+                        },
+                        ticks: {
+                            font: {
+                                size: 12 // Adjust font size for X-axis labels
+                            }
                         }
                     }
                 },
@@ -161,15 +177,28 @@
                 plugins: {
                     legend: {
                         position: 'top',
+                        labels: {
+                            font: {
+                                size: 24 // Adjust font size for legend labels
+                            }
+                        }
                     },
                     tooltip: {
                         mode: 'index',
                         intersect: false,
+                    },
+                    title: {
+                        display: true,
+                        text: 'Student Intake and Activities Over Years',
+                        font: {
+                            size: 25 // Adjust font size for chart title
+                        }
                     }
                 }
             }
         });
     </script>
+        
     
     <script>
         // Get the hamburger icon and navigation links

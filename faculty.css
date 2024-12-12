@@ -3,83 +3,85 @@
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
-}
-
-/* Header styling */
-#navbar-container
-{
+  }
+  
+  /* Header styling */
+  #navbar-container {
     position: sticky;
-}
-
-
-.header {
+  }
+  
+  .header {
     height: 10vh;
     width: 100%;
-    background: linear-gradient(135deg, rgba(160, 71, 188, 1), rgba(55, 17, 119, 1));
+    background: linear-gradient(
+      135deg,
+      rgba(160, 71, 188, 1),
+      rgba(55, 17, 119, 1)
+    );
     display: flex;
     align-items: center;
     position: sticky;
     justify-content: center;
-    top: 0; 
+    top: 0;
     overflow: hidden;
     z-index: 1;
     transition: 0.3s;
-}
-
-.nav-bar {
+  }
+  
+  .nav-bar {
     display: flex;
-    justify-content:space-between ;
+    justify-content: space-between;
     align-items: center;
     padding: 15px 12px;
     width: 85%;
-    position: sticky; 
-    top: 0; 
-    width:100%
-}
-
-.iet-logo a img {
+    position: sticky;
+    top: 0;
+    width: 100%;
+  }
+  
+  .iet-logo a img {
     height: 70px;
     filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.16));
     transition: transform 0.3s ease;
-}
-
-.iet-logo a img:hover {
+  }
+  
+  .iet-logo a img:hover {
     transform: scale(1.1);
-}
-
-/* Hamburger Icon */
-.hamburger {
+  }
+  
+  /* Hamburger Icon */
+  .hamburger {
     display: none;
     flex-direction: column;
     cursor: pointer;
     z-index: 1001;
-}
-
-.hamburger span {
+  }
+  
+  .hamburger span {
     height: 3px;
     width: 25px;
     background-color: white;
     margin: 4px;
     transition: all 0.3s ease;
-}
-
-.nav-links {
+  }
+  
+  .nav-links {
     width: 60vw;
     overflow: hidden;
     white-space: nowrap;
-}
-
-.nav-links ul {
+  }
+  
+  .nav-links ul {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-}
-
-.nav-links ul li {
+  }
+  
+  .nav-links ul li {
     list-style: none;
-}
-
-.nav-links ul li a {
+  }
+  
+  .nav-links ul li a {
     text-decoration: none;
     color: #fff;
     font-size: 18px;
@@ -87,36 +89,41 @@
     padding: 10px 20px;
     transition: color 0.3s ease, background-color 0.3s ease;
     font-family: sans-serif;
-}
-
-.nav-links ul li a:hover {
+  }
+  
+  .nav-links ul li a:hover {
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 5px;
     color: #f1c40f;
     font-family: sans-serif;
-}
-
-.nav-links ul li a.active {
-    background-color: rgba(255, 255, 255, 0.2); /* Same background color as hover */
+  }
+  
+  .nav-links ul li a.active {
+    background-color: rgba(
+      255,
+      255,
+      255,
+      0.2
+    ); /* Same background color as hover */
     border-radius: 5px;
     color: #f1c40f; /* Same text color as hover */
-}
-
-/* Faculty Section */
-.faculty-section {
+  }
+  
+  /* Faculty Section */
+  .faculty-section {
     text-align: center;
     padding: 40px 20px;
-     /* Light background for contrast */
-}
-
-.faculty-section h1 {
+    /* Light background for contrast */
+  }
+  
+  .faculty-section h1 {
     font-size: 6.5em;
     margin-bottom: 30px;
     color: #333; /* Dark text for better readability */
-}
-
-/* Faculty Container */
-.faculty-container {
+  }
+  
+  /* Faculty Container */
+  .faculty-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center; /* Center the cards */
@@ -124,19 +131,19 @@
     max-width: 1200px; /* Limit width */
     margin: 0 auto; /* Center container */
     margin-top: 3rem;
-}
-
-/* Faculty Card */
-.faculty-card {
+  }
+  
+  /* Faculty Card */
+  .faculty-card {
     background: white; /* White background for cards */
-    border-radius: 10px; /* Rounded corners */ /* Subtle shadow */
+    border-radius: 10px; /* Rounded corners / / Subtle shadow */
     text-align: center;
     padding: 20px;
     width: 30%; /* Fixed width for cards */
-}
-
-/* Faculty Image */
-.faculty-image {
+  }
+  
+  /* Faculty Image */
+  .faculty-image {
     width: 200px; /* Width of the image container */
     height: 200px; /* Height of the image container */
     border-radius: 50%; /* Circular shape */
@@ -145,149 +152,141 @@
     display: flex; /* Flexbox for centering the image */
     justify-content: center; /* Center image horizontally */
     align-items: center; /* Center image vertically */
-}
-
-
-@media screen and (max-width:992px){
-
-    .faculty-image
-    {
-        height: 150px;
-        width: 150px;
+  }
+  
+  @media screen and (max-width: 992px) {
+    .faculty-image {
+      height: 150px;
+      width: 150px;
     }
-
-    
-}
-
-@media screen and (max-width:780px) {
-
-    .faculty-image
-    {
-        height: 100px;
-        width: 100px;
+  }
+  
+  @media screen and (max-width: 780px) {
+    .faculty-image {
+      height: 100px;
+      width: 100px;
     }
-    
-}
-
-.faculty-image:hover {
+  }
+  
+  .faculty-image:hover {
     transform: scale(1.1); /* Enlarge the image to 110% of its size */
-    transition: transform 0.3s ease; 
-}
-.faculty-image img {
+    transition: transform 0.3s ease;
+  }
+  .faculty-image img {
     width: 100%; /* Take full width of the container */
     height: 100%; /* Take full height of the container */
     object-fit: cover; /* Ensure image covers the container without stretching */
-}
-
-
-
-/* Faculty Name and Designation */
-.faculty-name {
+  }
+  
+  /* Faculty Name and Designation */
+  .faculty-name {
     font-size: 1.5em; /* Font size for names */
     color: #5f259f; /* Primary color */
     margin-bottom: 5px; /* Space below name */
     font-family: Courier New;
-
-}
-
-.faculty-designation {
+  }
+  
+  .faculty-designation {
     font-size: 1em; /* Font size for designations */
     color: #666; /* Secondary text color */
     font-family: Courier New;
-}
-.footer-content {
+  }
+  .footer-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0.625em;
     background: rgba(95, 37, 159, 0.9);
     color: white;
-}
-
-.social-media {
+  }
+  
+  .social-media {
     display: flex;
     justify-content: center;
-}
-
-.social-media a {
+  }
+  
+  .social-media a {
     color: white;
     margin: 0 1em;
     text-decoration: none;
     transition: color 0.3s ease;
-}
-
-.social-media a:hover {
+  }
+  
+  .social-media a:hover {
     color: #f1c40f;
-}
-
-
-@media (max-width: 1360px) {
+  }
+  
+  @media (max-width: 1360px) {
     /* Display the hamburger icon on small screens */
     .hamburger {
-        display: flex;
-        flex-direction: column;
-        cursor: pointer;
-        z-index: 1001;
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+      z-index: 1001;
     }
-
+  
     /* Style the navigation links for small screens */
     .nav-links {
-        display: none;
-        flex-direction: column;
-        position: fixed;
-        top: 10vh; /* Place it below the header */
-        left: 0;
-        width: 100vw;
-        height: 90vh;
-        background-color: rgba(95, 37, 159, 0.9);
-        transition: transform 0.3s ease;
-        z-index: 1000;
+      display: none;
+      flex-direction: column;
+      position: fixed;
+      top: 10vh; /* Place it below the header */
+      left: 0;
+      width: 100vw;
+      height: 90vh;
+      background-color: rgba(95, 37, 159, 0.9);
+      transition: transform 0.3s ease;
+      z-index: 1000;
     }
-
+  
     /* Show the navigation links when the menu is active */
     .nav-links.active {
-        display: flex;
+      display: flex;
     }
-
+  
     /* Make each link occupy one row */
     .nav-links ul {
-        flex-direction: column;
-        width: 100%; /* Full width for each link */
+      flex-direction: column;
+      width: 100%; /* Full width for each link */
     }
-
+  
     .nav-links ul li {
-        width: 100%;
-        text-align: center;
+      width: 100%;
+      text-align: center;
     }
-
+  
     .nav-links ul li a {
-        display: block;
-        padding: 1em;
-        width: 100%;
-        color: #fff;
-        font-size: 1.25em;
-        text-align: center;
-        transition: background-color 0.3s ease, color 0.3s ease;
-        font-family: sans-serif;
+      display: block;
+      padding: 1em;
+      width: 100%;
+      color: #fff;
+      font-size: 1.25em;
+      text-align: center;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      font-family: sans-serif;
     }
-
+  
     /* Hide the main content when the nav menu is active */
     #main-content.hidden {
-        display: none;
+      display: none;
     }
     body.no-scroll {
-        overflow: hidden;
+      overflow: hidden;
     }
-}
-.header.hidden {
+  }
+  .header.hidden {
     transform: translateY(-100%);
-}
-
-/* Styling for the Text */
-.faculty-section>h1 {
+  }
+  
+  /* Styling for the Text */
+  .faculty-section > h1 {
     font-size: clamp(24px, 8vw + 2em, 50px); /* Font size for the header text */
     color: transparent; /* Make the text transparent to apply the gradient */
-    background-image: linear-gradient(135deg, rgba(160, 71, 188, 1), rgba(55, 17, 119, 1)); /* Gradient background */
+    background-image: linear-gradient(
+      135deg,
+      rgba(160, 71, 188, 1),
+      rgba(55, 17, 119, 1)
+    ); /* Gradient background */
     background-clip: text; /* Make the gradient fill the text */
     -webkit-background-clip: text; /* For Safari */
     font-weight: bold; /* Ensure the text stays in one line */
@@ -296,278 +295,269 @@
     padding: 0;
     letter-spacing: 2px; /* Space between letters */
     font-family: Lucida Console;
-}
-
-/* Typing Animation for "Institution" */
-/* Basic styling for the container */
-/* Animation for a moving and color-changing circle */
-.typing-text {
+  }
+  
+  /* Typing Animation for "Institution" */
+  /* Basic styling for the container */
+  /* Animation for a moving and color-changing circle */
+  .typing-text {
     display: inline-block;
     border-right: 0.1em solid orange; /* Typewriter cursor effect */
   }
-
+  
   /* The typing effect */
   .typing-text::after {
-    content: '';
+    content: "";
     animation: blink-caret 0.75s step-end infinite;
   }
-
-
-
-
-  .senior-faculty
-  {
-    width: 100%;
-    height: 350px;
+  
+  /* Senior Faculty Section */
+  .senior-faculty {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    height: 50vh; /* Center vertically on the screen */
+    text-align: center;
   }
-
-  .senior-faculty-Heading
-  {
+  
+  /* Heading Style */
+  .senior-faculty-Heading {
     font-size: 35px;
     color: #7b00ff;
-    margin-bottom: 40px;
-    margin-top: 10px;
+    margin-bottom: 20px;
   }
-
-  .seniour-faculty-card
-  {
-    height: 100%;
-    width: 60%;
+  
+  /* Card Container */
+  .seniour-faculty-card {
     display: flex;
-    /* background-color: aquamarine; */
+    flex-direction: row;
     align-items: center;
-    border-radius: 250px;
-    cursor: pointer;
-    
+    justify-content: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
   }
-
-  .seniour-faculty-image
-  {
-    height: 100%;
-    width: 40%;
+  
+  /* Profile Image */
+  .seniour-faculty-image {
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
-    border-top-left-radius: 200px;
-    border-bottom-left-radius: 200px;
+    overflow: hidden;
+    margin-right: 20px; /* Space between image and text */
   }
-
-  .seniour-faculty-image>img
-  {
+  
+  .seniour-faculty-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-top-left-radius: 200px;
-    border-bottom-left-radius: 200px;
-
   }
-
-  .seniour-faculty-desc
-  {
-    width: 100%;
-    height: 100%;
-    background-color: #e9ecef;
+  
+  /* Text Section */
+  .seniour-faculty-desc {
     display: flex;
     flex-direction: column;
-    border-top-right-radius: 200px;
-    border-bottom-right-radius: 200px;
+    align-items: flex-center;
     justify-content: center;
-    transition: 0.5s;
-    
   }
-
-  .seniour-faculty-name
-  {
-
-    width: 100%;
-    text-align: center;
+  
+  /* Name Style */
+  .seniour-faculty-name {
+    font-size: 1.8rem;
+    font-weight: bold;
     color: #5f259f;
-    font-size: 2em;
-    /* background-color: aqua; */
-
-
+    margin-top: 20px;
   }
-
-
-  .line
-  {
+  
+  /* Designation Style */
+  .seniour-faculty-designation {
+    font-size: 1.2rem;
+    color: #7b00ff;
+    margin-top: 0;
+  }
+  .seniour-faculty-image {
+    width: 250px;
+    height: 250px;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 800px) {
+    .seniour-faculty-card {
+      flex-direction: row;
+      align-items: center;
+    }
+  
+    .seniour-faculty-image {
+      width: 300px;
+      height: 300px;
+    }
+  
+    .seniour-faculty-name {
+      font-size: 1.5rem;
+    }
+  
+    .seniour-faculty-designation {
+      font-size: 1rem;
+    }
+  
+    .senior-faculty-Heading {
+      font-size: 30px;
+    }
+  }
+  
+  @media screen and (max-width: 576px) {
+    .seniour-faculty-card {
+      width: 200%;
+      padding: 15px;
+    }
+  
+    .seniour-faculty-name {
+      font-size: 1.2rem;
+    }
+  
+    .seniour-faculty-designation {
+      font-size: 1rem;
+    }
+  
+    .senior-faculty-Heading {
+      font-size: 28px;
+    }
+  }
+  
+  .line {
     /* background-color: antiquewhite; */
     color: #7b00ff;
     font-size: 18px;
     text-align: center;
   }
-
-
+  /*
   .seniour-faculty-designation {
-
     display: none;
     transform: rotateX(180deg);
-}
-
-.seniour-faculty-rotate {
+  }
+  
+  .seniour-faculty-rotate {
     transform: rotateX(180deg);
-}
-
-
-
-.senior-faculty-card.rotated .senior-faculty-designation {
-    display: block; /* Reveal on rotation */
-}
-
-
-.faculty-header
-{
+  }
+  
+  .senior-faculty-card.rotated .senior-faculty-designation {
+    display: block; /* Reveal on rotation 
+  }*/
+  
+  .faculty-header {
     margin-top: 25px;
     font-size: 2.1rem;
     color: #7b00ff;
-}
-
-.none
-{
+  }
+  /*
+  .none {
     display: none;
-}
-
-.show
-{
+  }
+  
+  .show {
     display: block;
-}
-
-
-
-  /* Blinking effect for the cursor */
+  }
+  
+  /* Blinking effect for the cursor *
   @keyframes blink-caret {
-    0%, 100% {
+    0%,
+    100% {
       border-color: transparent;
     }
     50% {
       border-color: orange;
     }
   }
-
-  .typing-text
-  {
+  
+  .typing-text {
     font-family: Lucida Console;
   }
-
-  @media screen  and (max-width:800px){
-
-    .typing-text
-    {
-
-        display: block; /* Moves it to the next line */
-        margin-top: 10px; /* Optional: Add some spacing */
-        font-size: 24px; 
-        
-
-    }
-
-    .faculty-section>h1
-    {
-        font-size: 28px;
-        background-color: aquamarine;
-        flex-wrap: nowrap;
-    }
-
-
-
+  
+  @media screen and (max-width: 800px) {
     .typing-text {
-        animation: none; /* Optional: Disable typewriter on very small screens */
-        font-size: 28px; /* Adjust font size */
-        border-style: none;
+      display: block; /* Moves it to the next line *
+      margin-top: 10px; /* Optional: Add some spacing *
+      font-size: 24px;
     }
-
-
-    .seniour-faculty-card
-    {
-        width: 90%;
+  
+    .faculty-section > h1 {
+      font-size: 28px;
+      background-color: aquamarine;
+      flex-wrap: nowrap;
     }
-
-
-    .senior-faculty-Heading
-    {
-        font-size: 35px;
+  
+    .typing-text {
+      animation: none; /* Optional: Disable typewriter on very small screens *
+      font-size: 28px; /* Adjust font size *
+      border-style: none;
     }
-
-
+  
+   /* .seniour-faculty-card {
+      width: 90%;
+    }
+  
+    .senior-faculty-Heading {
+      font-size: 35px;
+    }
   }
-
-  @media screen and (max-width:576px){
-    
-    .seniour-faculty-name
-    {
-        font-size: 20px;
+  
+  @media screen and (max-width: 576px) {
+    .seniour-faculty-name {
+      font-size: 20px;
     }
-
-    .line
-    {
-        font-size: 20px;
-
+  
+    .line {
+      font-size: 20px;
     }
-
-
-    .senior-faculty-Heading
-    {
-        /* background-color: #5f259f; */
+  
+    .senior-faculty-Heading {
+      /* background-color: #5f259f; *
     }
-
-    .seniour-faculty-card
-    {
-        width: 100%;
-        height: 80%;
-        /* background-color: aqua; */
-        margin-bottom: 0px;
+  
+    .seniour-faculty-card {
+      width: 100%;
+      height: 80%;
+      /* background-color: aqua; *
+      margin-bottom: 0px;
     }
-
-    .seniour-faculty-image
-    {
-        height: 50%;
-        width: 40%;
-        
+  
+    .seniour-faculty-image {
+      height: 50%;
+      width: 40%;
     }
-
-    .seniour-faculty-desc
-    {
-        height: 50%;
-        width: 60%;
-        display: flex;
-        flex-direction: column;
+  
+    .seniour-faculty-desc {
+      height: 50%;
+      width: 60%;
+      display: flex;
+      flex-direction: column;
     }
-
-    .seniour-faculty-name
-    {
-            height: 30%; /* Increased height */
-            font-size: 1.8rem; /* Optional: Adjust font size for better scaling */
-            display: flex; /* Align content */
-            align-items: center; /* Center vertically */
-            justify-content: center; /* Center horizontally */
-            margin-bottom: 10px;
-        
+  
+    .seniour-faculty-name {
+      height: 30%; /* Increased height *
+      font-size: 1.8rem; /* Optional: Adjust font size for better scaling *
+      display: flex; /* Align content *
+      align-items: center; /* Center vertically *
+      justify-content: center; /* Center horizontally *
+      margin-bottom: 10px;
     }
-
-    .senior-faculty-Heading
-    {
-        font-size: 30px;
-        margin-bottom: 0px;
+  
+    .senior-faculty-Heading {
+      font-size: 30px;
+      margin-bottom: 0px;
     }
-
-    .senior-faculty
-    {
-        display: flex;
-        flex-direction: column;
-        justify-content: start;
-        height: 300px;
-        /* background-color: black; */
+  
+    .senior-faculty {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      height: 300px;
+      /* background-color: black; *
+    }/*
+  
+    .faculty-header {
+      margin-top: 0px;
     }
-
-    .faculty-header
-{
-    margin-top: 0px;
-}
-
-
-
-
   }

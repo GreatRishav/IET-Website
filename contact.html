@@ -12,10 +12,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    
     
     <script type="text/javascript">
         // Initialize EmailJS with your public API key
-        emailjs.init('58eJVCsO9fWmZ3nZA');
+        emailjs.init('sHUotJzJz3jX43yxW');
     </script>
     <style>
         /* Ensure the map container has a height */
@@ -68,8 +72,8 @@
 
     
                 <form id="form" class="feedback-form">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="user_name" required>
+                    <label for="to_name">Name</label>
+                    <input type="text" id="to_name" name="to_name" required>
             
                     <label for="email">Email</label>
                     <input type="email" id="email" name="user_email" required>
@@ -100,7 +104,7 @@
                 </div>
 
                 <div class="connect-withus-main-box">
-                    <div class="line-1"><strong>Adviser and Manager</strong></div>
+                    <div class="line-1"><strong>Manager and Web Developer</strong></div>
                     <div class="line-2">Neeladri Hazra</span></div>
                 </div>
 
@@ -110,7 +114,7 @@
                 </div>
 
                 <div class="connect-withus-main-box">
-                    <div class="line-1"><strong>Adviser and Manager and Deployer</strong></div>
+                    <div class="line-1"><strong>Adviser and Deployer</strong></div>
                     <div class="line-2">Saikat Sarkar</span></div>
                 </div>
             </div>
@@ -130,6 +134,8 @@
             </div>
         </div>
     </footer>
+
+
     
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script>
@@ -148,24 +154,29 @@
             .openPopup();
 
         // Handle the form submission
-        document.getElementById('form').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent form submission
+        const btn = document.getElementById('button');
 
-            const btn = document.getElementById('button');
-            btn.value = 'Sending...'; // Change button text
+        document.getElementById('form')
+         .addEventListener('submit', function(event) {
+           event.preventDefault();
+        
+           btn.value = 'Sending...';
 
-            const serviceID = 'service_g7s01gq'; // Your service ID
-            const templateID = 'template_y7aqp4i'; // Your template ID
-
-            // Send the form data
-            emailjs.sendForm(serviceID, templateID, this)
-                .then(() => {
-                    btn.value = 'Send Email'; // Reset button text
-                    alert('Sent!'); // Success message
-                }, (err) => {
-                    btn.value = 'Send Email'; // Reset button text
-                    alert(JSON.stringify(err)); // Error message
-                });
+           //cut this
+            //cut this
+        
+        
+           const serviceID = 'service_wwiq8qy';
+           const templateID = 'template_y7aqp4i';
+        
+           emailjs.sendForm(serviceID, templateID, this)
+            .then(() => {
+              btn.value = 'Send Email';
+              alert('Sent!');
+            }, (err) => {
+              btn.value = 'Send Email';
+              alert(JSON.stringify(err));
+            });
         });
     </script>
 
